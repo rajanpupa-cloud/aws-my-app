@@ -61,7 +61,16 @@ OR, the cdk will pick if from you aws preferences (cli configs) `aws configure`
 cdk destroy
 ```
 
+### How to fix the js output files being generated in same folder?
 
+Normally when you build the project, the typescript transpiler generates the js files in the same folder as the original ts file. 
+To change the location of those generated files open your `tsconfig.json` file.
+```
+  "compilerOptions": {
+      "outDir": "dist",
+      ...
+  }
+```
 
 
 ### References
